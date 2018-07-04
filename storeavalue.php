@@ -12,12 +12,11 @@ $f = fopen($file, 'r');
 $data = fgets($f);
 fclose($f);
 
-$parsedData[] = json_decode($data, true);
+$parsedData = json_decode($data, true);
 $parsedData[$tag] = $value;
-$fileData[] = json_encode($parsedData);
 
 $f = fopen($file, 'w') or die("Can't open file");
-fwrite($f, str_replace('"', '', json_encode($fileData)));
+fwrite($f, json_encode($parsedData));
 fclose($f);
 
 $result = array("STORED", $tag, $value);
