@@ -12,9 +12,9 @@ $f = fopen($file, 'r');
 $data = fgets($f);
 fclose($f);
 
-$parsedData = json_decode($data, true);
+$parsedData = json_decode($data);
 $parsedData[$tag] = $value;
-$data = json_encode(array_merge($data, $parsedData));
+$data = json_encode($parsedData);
 
 $f = fopen($file, 'w') or die("can't open file");
 fwrite($f, str_replace('"', '', $data));
