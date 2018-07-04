@@ -1,0 +1,16 @@
+# Start the rewrite engine
+RewriteEngine On
+RewriteBase /
+
+# Disable Indexing
+Options -Indexes
+
+# Remove PHP extension
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+?)/?$ $1.php
+
+# Deny Access to Database File
+<FilesMatch "database\.txt">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
