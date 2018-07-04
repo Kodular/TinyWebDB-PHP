@@ -1,7 +1,11 @@
 <?php 
 
-$tag = trim($_POST['tag']); 
-$value = trim($_POST['value']); 
+parse_str($_SERVER['QUERY_STRING'], $POST);
+if ($_SERVER['REQUEST_METHOD'] != "POST" || !isset($POST['tag']) || !isset($POST['value'])) {
+    die("Not Allowed");
+}
+$tag = trim($POST['tag']); 
+$value = trim($POST['value']); 
 
 $file = "database.txt";
 $f = fopen($file, 'r');
