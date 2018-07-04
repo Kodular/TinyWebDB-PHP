@@ -12,7 +12,7 @@ $f = fopen($file, 'r');
 $data = fgets($f);
 fclose($f);
 
-$parsedData = json_decode($data, true);
+$parsedData[] = json_decode($data, true);
 $parsedData[$tag] = $value;
 $fileData[] = json_encode($parsedData);
 
