@@ -8,7 +8,7 @@ $tag = trim($POST['tag']);
 
 $file = "database.txt";
 $f = fopen($file, 'r');
-$data = json_decode(fgets($f));
+$data = json_decode(fgets($f), true);
 fclose($f);
 
 $result = array("VALUE", $tag, $data[$tag]);
