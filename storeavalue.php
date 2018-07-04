@@ -17,7 +17,7 @@ $parsedData[$tag] = $value;
 $fileData[] = json_encode($parsedData);
 
 $f = fopen($file, 'w') or die("Can't open file");
-fwrite($f, str_replace('"', '', $fileData));
+fwrite($f, str_replace('"', '', json_encode($fileData)));
 fclose($f);
 
 $result = array("STORED", $tag, $value);
