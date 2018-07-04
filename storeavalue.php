@@ -14,7 +14,7 @@ fclose($f);
 
 $parsedData = json_decode($data, true);
 $parsedData[$tag] = $value;
-$data = json_encode($parsedData);
+$data = json_encode(array_merge($data, $parsedData));
 
 $f = fopen($file, 'w') or die("can't open file");
 fwrite($f, str_replace('"', '', $data));
