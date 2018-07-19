@@ -1,5 +1,6 @@
 <?php
 
+header("Content-Type: application/jsonrequest");
 $file = "database.txt";
 
 if ($_SERVER['REQUEST_METHOD'] != "POST" || !isset($_REQUEST['tag'])) {
