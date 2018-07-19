@@ -1,11 +1,12 @@
-<?php 
+<?php
 
-parse_str($_SERVER['QUERY_STRING'], $POST);
-if ($_SERVER['REQUEST_METHOD'] != "POST" || !isset($POST['tag']) || !isset($POST['value'])) {
+$file = "database.txt";
+
+if ($_SERVER['REQUEST_METHOD'] != "POST" || !isset($_REQUEST['tag']) || !isset($_REQUEST['value'])) {
     die("Not Allowed");
 }
-$tag = trim($POST['tag']); 
-$value = trim($POST['value']); 
+$tag = $_REQUEST['tag'];
+$value = trim($_REQUEST['value']);
 
 $file = "database.txt";
 $f = fopen($file, 'r');
@@ -22,4 +23,4 @@ fclose($f);
 $result = array("STORED", $tag, $value);
 echo json_encode($result);
 
-?> 
+?>
