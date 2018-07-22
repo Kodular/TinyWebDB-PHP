@@ -9,10 +9,10 @@ This tutorial will help you to host your **own TinyWebDB Instance** for FREE usi
 This means that you can use _any hosting provider_ or a _VPS with a running Apache & PHP server_
 
 The tutorial is divided in **4 different sections**:
-1. [Signup into a hosting service](#heading--signup)
-2. [Uploading the files](#heading--upload)
-3. [Configuration](#heading--config)
-4. [Makeroid Builder setup](#heading--builder)
+1. [Signup into a hosting service](#1-signup-into-a-hosting-service)
+2. [Uploading the files](#2-uploading-the-files)
+3. [Configuration](#3-configuration)
+4. [Makeroid Builder setup](#4-makeroid-builder-setup)
 
 ---
 
