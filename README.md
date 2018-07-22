@@ -18,7 +18,7 @@ The tutorial is divided in **4 different sections**:
 
 ### 1. Signup into a hosting service
 
-You can skip this step and go to "[2. Uploading the files](#heading--upload)" if you already have a hosting provider or a VPS
+You can skip this step and go to "[2. Uploading the files](#2-uploading-the-files)" if you already have a hosting provider or a VPS
 
 One provider that will suit you is [AwardSpace](https://www.awardspace.com/), so we'll use that one for this guide. But you can use any other if they allow API hostings (_this means that websites can be accessed with JavaScript disabled basically_)
 ![image|690x320](https://community.makeroid.io/uploads/default/original/2X/9/9f1b0ab1fb6c170639e93bb210476caeea56b453.jpg)
