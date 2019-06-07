@@ -1,6 +1,11 @@
 <?php
 
-$file = "database.txt";
+header("Content-Type: application/json");
+$file = "database.json";
+
+if (file_exists("database.txt") && !file_exists($file)) {
+    rename("data.txt", $file);
+}
 
 if ($_SERVER['REQUEST_METHOD'] != "POST" || !isset($_REQUEST['tag']) || !isset($_REQUEST['value'])) {
     die("Not Allowed");
@@ -8,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] != "POST" || !isset($_REQUEST['tag']) || !isset($
 $tag = $_REQUEST['tag'];
 $value = trim($_REQUEST['value']);
 
-$file = "database.txt";
 $f = fopen($file, 'r');
 $data = fgets($f);
 fclose($f);

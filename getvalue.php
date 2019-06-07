@@ -1,7 +1,11 @@
 <?php
 
-header("Content-Type: application/jsonrequest");
-$file = "database.txt";
+header("Content-Type: application/json");
+$file = "database.json";
+
+if (file_exists("database.txt") && !file_exists($file)) {
+    rename("data.txt", $file);
+}
 
 if ($_SERVER['REQUEST_METHOD'] != "POST" || !isset($_REQUEST['tag'])) {
     die("Not Allowed");
